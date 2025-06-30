@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import RateLimitedUI from '../components/RateLimitedUI';
+import axios from "axios";
 
 const HomePage = () => {
   const [isRateLimited, setIsRateLimited] = useState(true);
@@ -10,10 +11,9 @@ const HomePage = () => {
   useEffect(() => {
     const fetchNotes = async () => {
       try {
-        const res = await fetch("http://localhost:5001/api/notes");
-        const data = await res.json();
+        const res = await axios.get("http://localhost:5001/api/notes");
 
-        console.log(data);
+        console.log(res.data);
       } catch (error) {
         console.log("Error fetching notes", error);
       }
