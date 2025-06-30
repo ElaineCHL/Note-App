@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 
 app.use("/api/notes", noteRoutes)
 
-connectDB().then( => {
+connectDB().then(() => {
   app.listen(PORT, () => {
     console.log("Server started on PORT: " + PORT);
   });
