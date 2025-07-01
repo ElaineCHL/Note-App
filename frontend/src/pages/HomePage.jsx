@@ -2,8 +2,10 @@ import toast from "react-hot-toast";
 import { useState, useEffect } from 'react';
 
 import api from '../lib/axios.js';
-import RateLimitedUI from '../components/RateLimitedUI';import NoteCard from '../components/NoteCard';
+import RateLimitedUI from '../components/RateLimitedUI'; 
+import NoteCard from '../components/NoteCard';
 import Navbar from '../components/Navbar';
+import NotesNotFound from "../components/NotesNotFound.jsx";
 
 const HomePage = () => {
   const [isRateLimited, setIsRateLimited] = useState(false);
@@ -41,10 +43,11 @@ const HomePage = () => {
         {notes.length > 0 && !isRateLimited && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {notes.map(note => (
-              <NoteCard key={note._id} note={note} />
+              <NoteCard key={note._id} note={note} setNotes={setNotes} />
             ))}
           </div>
         )}
+        {notes.length === 0 && !loading && !isRateLimited &&  <NotesNotFound />}
       </div>
     </div>
   )
