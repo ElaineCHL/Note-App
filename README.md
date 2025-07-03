@@ -1,12 +1,56 @@
-# React + Vite
+# Note-App 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, cross-platform note-taking application built with the **MERN** stack.
 
-Currently, two official plugins are available:
+Deployed via: [Render.com](https://render.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Reference: [freeCodeCamp.org](https://www.freecodecamp.org/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Features
+
+* 📝 Create, Read, Update, and Delete notes in real time
+* 🔄 Instant updates with a responsive UI
+* 🌐 Cross-platform support
+* 🎯 Clean and minimal design
+
+## Installation
+
+1. Clone the repository:
+   git clone https://github.com/ElaineCHL/Note-App.git
+   cd Note-App
+2. Install dependencies:
+   npm install
+3. Build the project:
+   npm run build
+4. Start the application:
+   npm run start
+
+---
+
+## Usage
+
+* **Start the app** :
+
+  Use `npm run dev` during development or run the built version in production.
+* **Create a note** :
+
+  Click the **"New Note"** button, enter your content, and save it.
+* **Edit a note** :
+
+  Click on an existing note to open the editor.
+* **Delete** :
+
+  Click the delete icon to delete notes.
+
+---
+
+## Tech Stack
+
+* **MongoDB** – NoSQL database
+* **Express.js** – Web framework for Node.js
+* **React** – Frontend library
+* **Node.js** – JavaScript runtime
+* **Render.com** – Hosting and deployment
