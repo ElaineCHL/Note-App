@@ -11,8 +11,6 @@ const NoteCard = ({ note, setNotes }) => {
     e.preventDefault();
 
     if (!confirm("Are you sure you want to delete this note?")) return;
-
-    console.log(`delete ${note._id}`);
     try {
       const res = await api.delete(`/notes/${id}`);
       setNotes((prev) => prev.filter(note => note._id !== id)); // remove the deleted note from the list
