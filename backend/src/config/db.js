@@ -9,20 +9,3 @@ export const connectDB = async () => {
     process.exit(1); // exit with error
   }
 }
-
-// FOR MULTIPLE INDEPENDENT CONNECTIONS
-// const noteDb = mongoose.createConnection(process.env.NOTE_DB_URI);
-// const userDb = mongoose.createConnection(process.env.USER_DB_URI);
-
-// module.exports = {
-//   noteDb,
-//   userDb,
-// };
-
-// CREATE ANOTHER MODEL SCHEMA
-// const userSchema = new mongoose.Schema({
-//   username: String,
-//   email: String,
-// });
-
-// const User = userDb.model('User', userSchema);
